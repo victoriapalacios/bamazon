@@ -28,7 +28,7 @@ function readProducts() {
       table += 'Item ID: ' + res[i].id + '  ||  ';
       table += 'Product Name: ' + res[i].product_name + '  ||  ';
       table += 'Department: ' + res[i].department_name + '  ||  ';
-      table += 'Price: $' + res[i].price + '\n';
+      table += 'Price: $' + res[i].price + '  ||  ';
       table += 'Quantity: ' + res[i].stock_quantity + '\n';
 
       console.log(table);
@@ -74,7 +74,7 @@ function userPrompt() {
           connection.query(updateTable, function(err, data) {
             if (err) throw err;
 
-            console.log("Your total is $" + productData.price * quantity + "Thank you for your order!");
+            console.log("Your total is $" + productData.price * quantity + ". Thank you for your order!");
           })
         }
 
